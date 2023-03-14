@@ -1,31 +1,6 @@
 # **Otsikko** 1
 # Otsikko *2*
 
-~~According to all known laws
-of aviation,
-
-  
-there is no way a bee
-should be able to fly.
-
-  
-Its wings are too small to get
-its fat little body off the ground.
-
-  
-The bee, of course, flies anyway
-
-  
-because bees don't care
-what humans think is impossible.
-
-  
-Yellow, black. Yellow, black.
-Yellow, black. Yellow, black.
-
-  
-Ooh, black and yellow!
-Let's shake it up a little.
-
-  
-Barry! Breakfast is ready!~~
+**Viikko** 1
+[gitlog.txt](https://github.com/Robomarti/harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
+[komentorivi.txt](https://github.com/Robomarti/harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
