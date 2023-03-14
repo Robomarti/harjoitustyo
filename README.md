@@ -1,4 +1,4 @@
-# ** Otsikko ** 1
+# **Otsikko** 1
 # Otsikko *2*
 
 ~~According to all known laws
@@ -28,4 +28,4 @@ Ooh, black and yellow!
 Let's shake it up a little.
 
   
-Barry! Breakfast is ready! ~~
+Barry! Breakfast is ready!~~
