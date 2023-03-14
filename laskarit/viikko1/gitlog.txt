@@ -1,0 +1,103 @@
+commit 91d712f8d6c9b4720cd8f31a2e7dbeff9b85ccca
+Author: Roberto Martinez Keisala <robomarti@outlook.com>
+Date:   Tue Mar 14 16:51:56 2023 +0200
+
+    tehtava11
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit e98db9cfc208365f38012786bdb1691237365edb
+Author: Roberto Martinez Keisala <robomarti@outlook.com>
+Date:   Tue Mar 14 16:41:10 2023 +0200
+
+    tehtava9
+
+ eka.txt    | 3 ++-
+ kolmas.txt | 3 ++-
+ 2 files changed, 4 insertions(+), 2 deletions(-)
+
+commit 9a1876d024f79524d5c3c064ac71b3f1cdf2cd5a
+Author: Roberto Martinez Keisala <robomarti@outlook.com>
+Date:   Tue Mar 14 16:39:30 2023 +0200
+
+    tehtava8osa2
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit fc625883efe7587ecfe11d5c3f0abc98fd9546b2
+Author: Roberto Martinez Keisala <robomarti@outlook.com>
+Date:   Tue Mar 14 16:38:11 2023 +0200
+
+    tehtava8
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit a87d5913b4a289aeeb2d714e83f93f113b6881ed
+Author: Roberto Martinez Keisala <robomarti@outlook.com>
+Date:   Tue Mar 14 16:35:22 2023 +0200
+
+    tehtava7osa2
+
+ tiedosto.txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit c31d41c7fe4c86007aef1b13dfa041ea6838d4ae
+Author: Roberto Martinez Keisala <robomarti@outlook.com>
+Date:   Tue Mar 14 16:34:52 2023 +0200
+
+    tehtava7
+
+ tiedosto.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit eeb4eacceb4812f8f7d9538b468dee3e1616d073
+Author: Roberto Martinez Keisala <robomarti@outlook.com>
+Date:   Tue Mar 14 16:17:41 2023 +0200
+
+    stuff
+
+ stuff/joku.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit a653bf68f0ad22d375b23f4536e62fe023b513d3
+Author: Roberto Martinez Keisala <robomarti@outlook.com>
+Date:   Tue Mar 14 16:16:49 2023 +0200
+
+    kaks ja kolme
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit d879e8e86b6f5a3cf8e229999c086ec8a9491ed7
+Author: Roberto Martinez Keisala <robomarti@outlook.com>
+Date:   Tue Mar 14 16:15:50 2023 +0200
+
+    kolmas
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit c7f42a0b131bcdd62ee99a216fc1a37915c3e933
+Author: Roberto Martinez Keisala <robomarti@outlook.com>
+Date:   Tue Mar 14 16:13:15 2023 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit ed79b399a7e14f0c176372cd50837fddfcdb1116
+Author: Roberto Martinez Keisala <robomarti@outlook.com>
+Date:   Tue Mar 14 16:06:03 2023 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
