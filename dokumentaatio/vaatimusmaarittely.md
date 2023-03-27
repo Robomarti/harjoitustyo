@@ -38,3 +38,5 @@ Perusversion jälkeen peliin lisätään seuraavat toiminnallisuudet ajan sallie
 
 - Pelaajat voivat valita itselleen nimet
 - Pelaajia voi olla useampi kuin 2
+- Koko pelin pituutta voi vaihtaa
+- Pelin voi tallentaa jokaisen vuoron jälkeen, ja siihen voi palata myöhemmin
