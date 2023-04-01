@@ -7,3 +7,6 @@
 [Vaatimusmäärittely](https://github.com/Robomarti/harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
 [Työaikakirjanpito](https://github.com/Robomarti/harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
+
+# Viikko 1
+[Changelog](https://github.com/Robomarti/harjoitustyo/blob/master/dokumentaatio/changelog.md)
