@@ -10,4 +10,5 @@
 | 3.4.2023 | 1 | Otin Pylintin käyttöön. |
 | 6.4.2023 | 1 | Muokkasin luokkarakennetta enemmän kurssimateriaalin kaltaiseksi. |
 | 7.4.2023 | 3 | Päivitin liikkumissysteemiä. |
-| Yht. | 14 | |
+| 10.4.2023 | 3 | Lisäsin testikattavuutta sekä lisäsin kaapattavat liput |
+| Yht. | 17 | |
