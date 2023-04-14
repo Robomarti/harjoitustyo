@@ -11,4 +11,5 @@
 | 6.4.2023 | 1 | Muokkasin luokkarakennetta enemmän kurssimateriaalin kaltaiseksi. |
 | 7.4.2023 | 3 | Päivitin liikkumissysteemiä. |
 | 10.4.2023 | 3 | Lisäsin testikattavuutta sekä lisäsin kaapattavat liput |
+| 14.4.2023 | 1 | Jatkoin ammusten ohjelmointia |
 | Yht. | 17 | |

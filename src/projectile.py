@@ -4,7 +4,7 @@ class Projectile():
     def __init__(self,start_location, target_location):
         self.location = start_location
         self.target_location = target_location
-        self.radius = 1
+        self.radius = 10
         self.velocity = 1
         self.color = "yellow"
     

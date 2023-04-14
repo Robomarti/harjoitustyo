@@ -2,6 +2,7 @@ import copy
 import pygame
 import settings
 import sprites.player
+import projectile
 
 class GameLoop:
     def __init__(self, level, display, renderer, event_queue, clock):
@@ -35,6 +36,10 @@ class GameLoop:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return False
+            if event.type == pygame.MOUSEBUTTONUP:
+                pos = event.pos
+                new_projectile = projectile.Projectile(self.current_player.pos, pos)
+                print("pew")
             if event.type == pygame.KEYUP:
                 if event.key == pygame.K_UP:
                     #only erase previous position if the action is to move
