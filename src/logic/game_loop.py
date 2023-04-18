@@ -1,8 +1,8 @@
 import copy
 import pygame
-import settings
+import services.settings
 import sprites.player
-import projectile
+import sprites.projectile
 
 class GameLoop:
     def __init__(self, level, display, renderer, event_queue, clock):
@@ -15,7 +15,7 @@ class GameLoop:
         self.player1 = sprites.player.Player([self._level.visible_sprites], 1)
         self.player2 = sprites.player.Player([self._level.visible_sprites], 2)
 
-        self.game_map = copy.deepcopy(settings.MAP)
+        self.game_map = copy.deepcopy(services.settings.MAP)
         self._level.create_map()
         self._level.update_map(self.game_map, self.player1, self.player2)
         
@@ -25,20 +25,22 @@ class GameLoop:
         self.current_turn = 1
         self.current_player = self.player1
 
+        self.p1_projectile = sprites.projectile.Projectile((-100,-100), (-100,-100))
+        self.p2_projectile = sprites.projectile.Projectile((-100,-100), (-100,-100))
+
     def start(self):
         while True:
             if self._handle_events() == False:
                 break
             self._render()
-            self._clock.tick(settings.FPS)
+            self._clock.tick(services.settings.FPS)
 
     def _handle_events(self):
-        for event in pygame.event.get():
+        for event in self._event_queue.get():
             if event.type == pygame.QUIT:
                 return False
             if event.type == pygame.MOUSEBUTTONUP:
                 pos = event.pos
-                new_projectile = projectile.Projectile(self.current_player.pos, pos)
                 print("pew")
             if event.type == pygame.KEYUP:
                 if event.key == pygame.K_UP:

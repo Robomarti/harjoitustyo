@@ -5,3 +5,6 @@
 
 # Viikko 3
 [Changelog](https://github.com/Robomarti/harjoitustyo/blob/master/dokumentaatio/changelog.md)
+
+# Viikko 4
+[Arkkitehtuuri](https://github.com/Robomarti/harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)

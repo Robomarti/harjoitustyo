@@ -6,7 +6,7 @@ class Flag(pygame.sprite.Sprite):
         if image_num == 1:
             self.image = pygame.image.load(
                 "src/assets/p1flag.png")
-        elif image_num == 2:
+        else:
             self.image = pygame.image.load(
                 "src/assets/p2flag.png")
         self.original_position = position

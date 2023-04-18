@@ -14,13 +14,13 @@ Sovelluksen tarkoitus on olla pieni kaksinpelattava peli, jossa pelaajat yrittä
 
 ### Pelin pelaaminen
 
-- Peliä pelataan vuorotellen samalla tietokoneella, pelaaja 1 aloittaa.
+- Peliä pelataan vuorotellen samalla tietokoneella, pelaaja 1 aloittaa. TEHTY
 - Vuorot pelataan salassa, esimerkiksi kääntämällä näytön poispäin toisesta pelaajasta
 - Aika on "pysähtynyt" vuorojen aikana, ja molempien pelaajien toiminnot tapahtuvat samaan aikaan, kun pelaaja 2 on valmis lopettamaan vuoronsa.
 - Vuoronsa aikana pelaajalla on kaksi mahdollista toimintoa: Liiku ja hyökkää
   - Pelaaja voi tehdä molemmat toiminnot missä järjestyksessä tahansa.
-  - Liikkuessaan pelaaja voi liikkua tietyn etäisyyden haluamaansa suuntaan.
-    - Jos pelaaja liikkuu vastakkaisen pelaajan lipun päälle, hän alkaa kantamaan sitä mukanansa
+  - Liikkuessaan pelaaja voi liikkua tietyn etäisyyden haluamaansa suuntaan. TEHTY
+    - Jos pelaaja liikkuu vastakkaisen pelaajan lipun päälle, hän alkaa kantamaan sitä mukanansa TEHTY
     - Jos pelaaja liikkuu vastakkaisen pelaajan lipun kanssa omaan maaliinsa, hän saa yhden pisteen.
   - Hyökätessään pelaaja voi ampua haluamaansa suuntaan.
     - Jos pelaaja osuu toiseen pelaajaan, pelaaja johon hän osui palaa takaisin kohtaan, josta hän aloitti pelin.

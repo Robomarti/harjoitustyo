@@ -1,5 +1,5 @@
 import pygame
-import settings
+import services.settings
 import sprites.tile
 import sprites.player
 import sprites.flag
@@ -14,13 +14,13 @@ class Level:
         self.flag_2 = sprites.flag.Flag((11, 5), [self.visible_sprites], 2)
 
     def create_map(self):
-        game_map = settings.MAP
+        game_map = services.settings.MAP
         height = len(game_map)
         width = len(game_map[0])
         for i in range(height):
             for j in range(width):
-                x_coordinate = j * settings.TILESIZE
-                y_coordinate = i * settings.TILESIZE
+                x_coordinate = j * services.settings.TILESIZE
+                y_coordinate = i * services.settings.TILESIZE
                 if game_map[i][j] == "x":
                     sprites.tile.Tile((x_coordinate, y_coordinate), [self.visible_sprites, self.obstacle_sprites], 1)
                 elif game_map[i][j] == "p1gu":
@@ -42,8 +42,8 @@ class Level:
         width = len(game_map[0])
         for i in range(height):
             for j in range(width):
-                x_coordinate = j * settings.TILESIZE
-                y_coordinate = i * settings.TILESIZE
+                x_coordinate = j * services.settings.TILESIZE
+                y_coordinate = i * services.settings.TILESIZE
                 if game_map[i][j] == "p1":
                     if player_one.has_flag:
                         self.flag_2.current_position = [j,i,]
