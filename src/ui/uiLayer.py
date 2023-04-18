@@ -4,7 +4,7 @@ font = pygame.font.Font(None, 30)
 
 
 # osa youtube tutoriaalia: https://www.youtube.com/watch?v=QU1pPzEGrqw jossain n. 5min jälkeen
-def showText(text, y=20, x=640):
+def showText(text, y=20, x=512):
     display_surface = pygame.display.get_surface()
     failed = False
     try:

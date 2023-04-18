@@ -28,12 +28,16 @@ class GameLoop:
         self.p1_projectile = sprites.projectile.Projectile((-100,-100), (-100,-100))
         self.p2_projectile = sprites.projectile.Projectile((-100,-100), (-100,-100))
 
+        self.turns = 30
+
     def start(self):
         while True:
             if self._handle_events() == False:
                 break
+            
             self._render()
             self._clock.tick(services.settings.FPS)
+            
 
     def _handle_events(self):
         for event in self._event_queue.get():
@@ -83,6 +87,7 @@ class GameLoop:
         else:
             self.current_turn = 1
             self.current_player = self.player1
+            self.turns -= 1
 
     def _render(self):
-        self._renderer.render()
+        self._renderer.render(self.turns)
