@@ -4,12 +4,14 @@ import pygame
 import services.level
 import logic.game_loop
 
+
 class StubClock:
     def tick(self, fps):
         pass
 
     def get_ticks(self):
         0
+
 
 class StubEvent:
     def __init__(self, event_type, key):
@@ -29,15 +31,17 @@ class StubRenderer:
     def render(self):
         pass
 
+
 class TestGameLoop(unittest.TestCase):
-    def setUp(self) :
-        display = pygame.display.set_mode((1,1))
+    def setUp(self):
+        display = pygame.display.set_mode((1, 1))
         level = services.level.Level()
         renderer = StubRenderer()
         events = [StubEvent(pygame.KEYDOWN, pygame.K_LEFT),]
         event_queue = StubEventQueue(events)
         clock = StubClock()
-        self.loop = logic.game_loop.GameLoop(level, display, renderer, event_queue, clock)
+        self.loop = logic.game_loop.GameLoop(
+            level, display, renderer, event_queue, clock)
 
     def test_first_turn(self):
         self.assertEqual(self.loop.current_turn, 1)

@@ -12,5 +12,5 @@
 | 7.4.2023 | 3 | Päivitin liikkumissysteemiä. |
 | 10.4.2023 | 3 | Lisäsin testikattavuutta sekä lisäsin kaapattavat liput |
 | 14.4.2023 | 1 | Aloitin ammusten ohjelmoinnin |
-| 18.4.2023 | 1 | Lisäsin testejä sekä dokumentaatiota |
-| Yht. | 19 | |
+| 18.4.2023 | 2 | Lisäsin testejä sekä dokumentaatiota |
+| Yht. | 20 | |

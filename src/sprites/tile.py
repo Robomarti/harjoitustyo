@@ -1,5 +1,6 @@
 import pygame
 
+
 class Tile(pygame.sprite.Sprite):
     def __init__(self, position, groups, image_num):
         super().__init__(groups)

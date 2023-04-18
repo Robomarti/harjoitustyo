@@ -1,6 +1,7 @@
 import pygame
 import ui.uiLayer
 
+
 class Renderer:
     def __init__(self, display, level):
         self._display = display

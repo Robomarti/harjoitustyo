@@ -1,5 +1,6 @@
 import pygame
 
+
 class Player(pygame.sprite.Sprite):
     def __init__(self, groups, p1orp2):
         super().__init__(groups)
@@ -19,28 +20,32 @@ class Player(pygame.sprite.Sprite):
     def move(self, game_map, direction):
         if direction == "up":
             wanted_pos = game_map[self.real_pos[1]-1][self.real_pos[0]]
-            can_move_to_wanted_pos = (wanted_pos == " " or wanted_pos == "p"+str(self.opponent_num)+"flag")
+            can_move_to_wanted_pos = wanted_pos in " " + \
+                "p"+str(self.opponent_num)+"flag"
             if abs(self.pos[1] - self.real_pos[1]) == 0 and can_move_to_wanted_pos:
                 self.pos[1] -= 1
                 self.pos[0] = self.real_pos[0]
 
         elif direction == "down":
             wanted_pos = game_map[self.real_pos[1]+1][self.real_pos[0]]
-            can_move_to_wanted_pos = (wanted_pos == " " or wanted_pos == "p"+str(self.opponent_num)+"flag")
+            can_move_to_wanted_pos = wanted_pos in " " + \
+                "p"+str(self.opponent_num)+"flag"
             if abs(self.pos[1] - self.real_pos[1]) == 0 and can_move_to_wanted_pos:
                 self.pos[1] += 1
                 self.pos[0] = self.real_pos[0]
 
         elif direction == "left":
             wanted_pos = game_map[self.real_pos[1]][self.real_pos[0]-1]
-            can_move_to_wanted_pos = (wanted_pos == " " or wanted_pos == "p"+str(self.opponent_num)+"flag")
+            can_move_to_wanted_pos = wanted_pos in " " + \
+                "p"+str(self.opponent_num)+"flag"
             if abs(self.pos[0] - self.real_pos[0]) == 0 and can_move_to_wanted_pos:
                 self.pos[0] -= 1
                 self.pos[1] = self.real_pos[1]
 
         elif direction == "right":
             wanted_pos = game_map[self.real_pos[1]][self.real_pos[0]+1]
-            can_move_to_wanted_pos = (wanted_pos == " " or wanted_pos == "p"+str(self.opponent_num)+"flag")
+            can_move_to_wanted_pos = wanted_pos in " " + \
+                "p"+str(self.opponent_num)+"flag"
             if abs(self.pos[0] - self.real_pos[0]) == 0 and can_move_to_wanted_pos:
                 self.pos[0] += 1
                 self.pos[1] = self.real_pos[1]
