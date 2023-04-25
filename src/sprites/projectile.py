@@ -1,13 +1,14 @@
-import pygame
+import services.settings
 
 
 class Projectile():
-    def __init__(self, start_location, target_location):
-        self.location = start_location
-        self.target_location = target_location
+    def __init__(self):
+        self.location = [-100, -100]
         self.radius = 10
         self.velocity = 1
         self.color = "yellow"
+        self.target_location = [-100, -100]
 
-    def draw(self, display):
-        pygame.draw.circle(display, self.color, self.location, self.radius)
+    def move(self):
+        self.location[0] += abs(self.location[0] -
+                                self.target_location[0]) / services.settings.FPS

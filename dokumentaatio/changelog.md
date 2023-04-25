@@ -9,3 +9,8 @@
 - Lisättiin testikattavuutta
 - Lisättiin pelaajien liikkumiselle rajoitteita
 - Lisättiin liput, sekä niille ja maaleille grafiikat
+
+## Viikko 5
+
+- Lisättiin pisteet ja niiden saaminen kantamalla lippu omaan maaliin
+- Saatiin lippujen toiminnallisuudet valmiiksi

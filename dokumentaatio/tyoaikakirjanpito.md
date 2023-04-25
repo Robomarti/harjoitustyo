@@ -10,7 +10,10 @@
 | 3.4.2023 | 1 | Otin Pylintin käyttöön. |
 | 6.4.2023 | 1 | Muokkasin luokkarakennetta enemmän kurssimateriaalin kaltaiseksi. |
 | 7.4.2023 | 3 | Päivitin liikkumissysteemiä. |
-| 10.4.2023 | 3 | Lisäsin testikattavuutta sekä lisäsin kaapattavat liput |
-| 14.4.2023 | 1 | Aloitin ammusten ohjelmoinnin |
-| 18.4.2023 | 2 | Lisäsin testejä sekä dokumentaatiota |
-| Yht. | 20 | |
+| 10.4.2023 | 3 | Lisäsin testikattavuutta sekä lisäsin kaapattavat liput. |
+| 14.4.2023 | 1 | Aloitin ammusten ohjelmoinnin. |
+| 18.4.2023 | 2 | Lisäsin testejä sekä dokumentaatiota. |
+| 22.4.2023 | 1 | Lisäsin ammusten toiminnallisuutta. |
+| 24.4.2023 | 2 | Lisäsin pisteiden keräämisen ja korjasin pitkäaikaisen bugin, jossa pelaaja 1 pystyi liikkumaan kaksi kertaa ensimmäisen vuoronsa aikana. |
+| 24.4.2023 | 3 | Sain lippujen toiminnallisuudet valmiiksi, ja lisäsin ja korjasin player- ja game_loop- testejä. |
+| Yht. | 26 | |

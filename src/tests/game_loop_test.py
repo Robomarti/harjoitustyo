@@ -36,12 +36,11 @@ class TestGameLoop(unittest.TestCase):
     def setUp(self):
         display = pygame.display.set_mode((1, 1))
         level = services.level.Level()
-        renderer = StubRenderer()
         events = [StubEvent(pygame.KEYDOWN, pygame.K_LEFT),]
         event_queue = StubEventQueue(events)
         clock = StubClock()
         self.loop = logic.game_loop.GameLoop(
-            level, display, renderer, event_queue, clock)
+            level, display, event_queue, clock)
 
     def test_first_turn(self):
         self.assertEqual(self.loop.current_turn, 1)
@@ -49,5 +48,7 @@ class TestGameLoop(unittest.TestCase):
     def test_change_turns_works(self):
         self.loop._change_turns()
         self.assertEqual(self.loop.current_turn, 2)
+        self.loop._change_turns()
+        self.assertEqual(self.loop.current_turn, 3)
         self.loop._change_turns()
         self.assertEqual(self.loop.current_turn, 1)

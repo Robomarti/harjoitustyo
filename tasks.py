@@ -10,7 +10,7 @@ def test(ctx):
 
 @task
 def coverage_report(ctx):
-    ctx.run("coverage html")
+    ctx.run("coverage html -i")
 
 @task
 def format(ctx):
