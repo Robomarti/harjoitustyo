@@ -33,6 +33,9 @@ Raportti generoituu hakemistoon nimeltä htmlcov
 poetry run invoke lint
 ```
 
+## Viikko 5 release:
+[](https://github.com/Robomarti/harjoitustyo/releases/tag/viikko5)
+
 ## Dokumentaatio:
 
 - [Vaatimusmäärittely](https://github.com/Robomarti/harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
