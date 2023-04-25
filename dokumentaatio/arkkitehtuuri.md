@@ -1,2 +1,2 @@
-![](./kuvat/luokkakaavio.png)
-![](./kuvat/sekvenssikaavio.png)
+![Luokkakaavio](./kuvat/luokkakaavio.png)
+![Sekvenssikaavio](./kuvat/sekvenssikaavio.png)
