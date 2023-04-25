@@ -34,7 +34,7 @@ poetry run invoke lint
 ```
 
 ## Viikko 5 release:
-[](https://github.com/Robomarti/harjoitustyo/releases/tag/viikko5)
+[Löytyy täältä](https://github.com/Robomarti/harjoitustyo/releases/tag/viikko5)
 
 ## Dokumentaatio:
 
