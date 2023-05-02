@@ -17,15 +17,15 @@ Sovelluksen tarkoitus on olla pieni kaksinpelattava peli, jossa pelaajat yrittä
 - Peliä pelataan vuorotellen samalla tietokoneella, pelaaja 1 aloittaa. TEHTY
 - Vuorot pelataan salassa, esimerkiksi kääntämällä näytön poispäin toisesta pelaajasta
 - Aika on "pysähtynyt" vuorojen aikana, ja molempien pelaajien toiminnot tapahtuvat samaan aikaan, kun pelaaja 2 on valmis lopettamaan vuoronsa.
-- Vuoronsa aikana pelaajalla on kaksi mahdollista toimintoa: Liiku ja hyökkää
-  - Pelaaja voi tehdä molemmat toiminnot missä järjestyksessä tahansa.
+- Vuoronsa aikana pelaajalla on kaksi mahdollista toimintoa: Liiku ja hyökkää TEHTY
+  - Pelaaja voi tehdä molemmat toiminnot missä järjestyksessä tahansa. TEHTY
   - Liikkuessaan pelaaja voi liikkua tietyn etäisyyden haluamaansa suuntaan. TEHTY
     - Jos pelaaja liikkuu vastakkaisen pelaajan lipun päälle, hän alkaa kantamaan sitä mukanansa TEHTY
     - Jos pelaaja liikkuu vastakkaisen pelaajan lipun kanssa omaan maaliinsa, hän saa yhden pisteen. TEHTY
-  - Hyökätessään pelaaja voi ampua haluamaansa suuntaan.
-    - Jos pelaaja osuu toiseen pelaajaan, pelaaja johon hän osui palaa takaisin kohtaan, josta hän aloitti pelin.
-      - Jos osuttu pelaaja oli kantamassa toisen pelaajan lippua, lippu jää siihen kohtaan mihin hän "kuoli".
-- Molemmilla pelaajilla on käytettävänään 10 vuoroa ennen kuin peli päättyy.
+  - Hyökätessään pelaaja voi ampua haluamaansa suuntaan. TEHTY
+    - Jos pelaaja osuu toiseen pelaajaan, pelaaja johon hän osui palaa takaisin kohtaan, josta hän aloitti pelin. TEHTY
+      - Jos osuttu pelaaja oli kantamassa toisen pelaajan lippua, lippu jää siihen kohtaan mihin hän "kuoli". TEHTY
+- Molemmilla pelaajilla on käytettävänään ~~10~~ 30 vuoroa ennen kuin peli päättyy. (Päivitetty kun huomasin että 10 vuoroa menee liian nopeasti ohi.)
   
 ### Pelin päätös
 

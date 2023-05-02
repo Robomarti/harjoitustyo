@@ -20,6 +20,7 @@ class Player(pygame.sprite.Sprite):
         self.points = 0
         self.goal = "p"+str(self.p1orp2)+"gu" + "p" + \
             str(self.p1orp2)+"g" + "p"+str(self.p1orp2)+"gl"
+        self.original_position = [0, 0]
 
     def move(self, game_map, direction):
         if direction == "up":
@@ -79,6 +80,10 @@ class Player(pygame.sprite.Sprite):
 
         if wanted_pos == "p"+str(self.opponent_num)+"flag":
             self.has_flag = True
+
+    def die(self):
+        self.pos = self.original_position
+        self.apply_real_position()
 
     def apply_real_position(self):
         self.real_pos = self.pos

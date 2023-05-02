@@ -17,6 +17,8 @@ class Renderer:
         pygame.draw.circle(self._display, self._p2_projectile.color,
                            self._p2_projectile.location, self._p2_projectile.radius)
         ui.uiLayer.showText("Turns left: " + str(turns), 20, 450)
-        ui.uiLayer.showText("Player 1 points: " + str(player_one.points), 20, 100)
-        ui.uiLayer.showText("Player 2 points: " + str(player_two.points), 20, 750)
+        ui.uiLayer.showText("Player 1 points: " +
+                            str(player_one.points), 20, 100)
+        ui.uiLayer.showText("Player 2 points: " +
+                            str(player_two.points), 20, 750)
         pygame.display.update()

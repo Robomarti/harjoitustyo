@@ -5,18 +5,46 @@ import sprites.flag
 
 
 class Level:
+    """A class that constructs and updates the map in a matrix form.
+
+    Attributes:
+        all_sprites: A group of sprites that should be drawn
+        game_map: A reference to the game_map attribute of the GameLoop class.
+        flag_1: A reference to the first player's flag.
+        flag_1_original_coordinates. The original location of the first player's flag.
+        flag_2: A reference to the second player's flag.
+        flag_2_original_coordinates. The original location of the second player's flag.
+
+    """
+
     def __init__(self):
-        self.display_surface = pygame.display.get_surface()
-        self.visible_sprites = pygame.sprite.Group()
-        self.obstacle_sprites = pygame.sprite.Group()
+        """A constructor that creates a new level.
+
+        """
+
         self.all_sprites = pygame.sprite.Group()
         self.game_map = None
         self.flag_1 = None
-        self.flag_1_coordinates = []
+        self.flag_1_original_coordinates = []
         self.flag_2 = None
-        self.flag_2_coordinates = []
+        self.flag_2_original_coordinates = []
+        self.player_one = None
+        self.player_two = None
 
-    def create_map(self, game_map):
+    def create_map(self, game_map, player_one, player_two):
+        """Creates a new map for the level from a given matrix.
+
+        Creates new instances of sprites for the walls of the map, for the goals, and for the flags.
+        Also saves the respawn points for the players.
+
+        Args:
+            game_map: A reference to the game_map attribute of the GameLoop class.
+            player_one: : A reference to the player1 attribute of the GameLoop class.
+            player_two: : A reference to the player2 attribute of the GameLoop class.
+        """
+
+        self.player_one = player_one
+        self.player_two = player_two
         self.game_map = game_map
         height = len(self.game_map)
         width = len(self.game_map[0])
@@ -24,80 +52,117 @@ class Level:
             for j in range(width):
                 x_coordinate = j * services.settings.TILESIZE
                 y_coordinate = i * services.settings.TILESIZE
-                if self.game_map[i][j] == "x":
-                    sprites.tile.Tile((x_coordinate, y_coordinate), [
-                                      self.visible_sprites, self.obstacle_sprites], 1)
-                elif self.game_map[i][j] == "p1gu":
-                    sprites.tile.Tile((x_coordinate, y_coordinate), [
-                                      self.visible_sprites], 2)
-                elif self.game_map[i][j] == "p1g":
-                    sprites.tile.Tile((x_coordinate, y_coordinate), [
-                                      self.visible_sprites], 3)
-                elif self.game_map[i][j] == "p1gl":
-                    sprites.tile.Tile((x_coordinate, y_coordinate), [
-                                      self.visible_sprites], 4)
-                elif self.game_map[i][j] == "p2gu":
-                    sprites.tile.Tile((x_coordinate, y_coordinate), [
-                                      self.visible_sprites], 5)
-                elif self.game_map[i][j] == "p2g":
-                    sprites.tile.Tile((x_coordinate, y_coordinate), [
-                                      self.visible_sprites], 6)
-                elif self.game_map[i][j] == "p2gl":
-                    sprites.tile.Tile((x_coordinate, y_coordinate), [
-                                      self.visible_sprites], 7)
-                elif self.game_map[i][j] == "p1flag":
-                    self.flag_1 = sprites.flag.Flag([x_coordinate, y_coordinate,], [
-                                                    self.visible_sprites], 1)
-                    self.flag_1_coordinates = [i, j]
-                elif self.game_map[i][j] == "p2flag":
-                    self.flag_2 = sprites.flag.Flag([x_coordinate, y_coordinate,], [
-                                                    self.visible_sprites], 2)
-                    self.flag_2_coordinates = [i, j]
+                self.create_assets(i, j, x_coordinate, y_coordinate)
 
-        self.all_sprites.add(self.visible_sprites, self.obstacle_sprites)
+    def create_assets(self, i, j, x_coordinate, y_coordinate):
+        # pylint: disable=too-many-statements
+        # All the statements are needed, and there is little
+        # point in making another method using them.
 
-    def update_map(self, player_one, player_two):
+        if self.game_map[i][j] == "x":
+            sprites.tile.Tile((x_coordinate, y_coordinate), [self.all_sprites], 1)
+        elif self.game_map[i][j] == "p1":
+            self.player_one.original_position = [j, i]
+        elif self.game_map[i][j] == "p2":
+            self.player_two.original_position = [j, i]
+        elif self.game_map[i][j] == "p1gu":
+            sprites.tile.Tile((x_coordinate, y_coordinate), [self.all_sprites], 2)
+        elif self.game_map[i][j] == "p1g":
+            sprites.tile.Tile((x_coordinate, y_coordinate), [self.all_sprites], 3)
+        elif self.game_map[i][j] == "p1gl":
+            sprites.tile.Tile((x_coordinate, y_coordinate), [self.all_sprites], 4)
+        elif self.game_map[i][j] == "p2gu":
+            sprites.tile.Tile((x_coordinate, y_coordinate), [self.all_sprites], 5)
+        elif self.game_map[i][j] == "p2g":
+            sprites.tile.Tile((x_coordinate, y_coordinate), [self.all_sprites], 6)
+        elif self.game_map[i][j] == "p2gl":
+            sprites.tile.Tile((x_coordinate, y_coordinate), [self.all_sprites], 7)
+        elif self.game_map[i][j] == "p1flag":
+            self.flag_1 = sprites.flag.Flag([x_coordinate, y_coordinate,], [self.all_sprites], 1)
+            self.flag_1_original_coordinates = [i, j]
+        elif self.game_map[i][j] == "p2flag":
+            self.flag_2 = sprites.flag.Flag([x_coordinate, y_coordinate,], [self.all_sprites], 2)
+            self.flag_2_original_coordinates = [i, j]
+
+    def update_map(self):
+        """Updates the locations of players and flags on the map.
+
+        Args:
+            player_one: : A reference to the player1 attribute of the GameLoop class.
+            player_two: : A reference to the player2 attribute of the GameLoop class.
+        """
+
         height = len(self.game_map)
         width = len(self.game_map[0])
         for i in range(height):
             for j in range(width):
-                x_coordinate = j * services.settings.TILESIZE
-                y_coordinate = i * services.settings.TILESIZE
                 if self.game_map[i][j] == "p1":
-                    if player_one.has_flag:
-                        self.flag_2.current_position = [j, i,]
-                        self.flag_2.rect.topleft = (x_coordinate, y_coordinate)
-                    player_one.pos = [j, i,]
-                    player_one.rect.topleft = (x_coordinate, y_coordinate)
+                    self.update_players(self.player_one, 1, j, i)
                 elif self.game_map[i][j] == "p2":
-                    if player_two.has_flag:
-                        self.flag_1.current_position = [j, i,]
-                        self.flag_1.rect.topleft = (x_coordinate, y_coordinate)
-                    player_two.pos = [j, i,]
-                    player_two.rect.topleft = (x_coordinate, y_coordinate)
+                    self.update_players(self.player_two, 2, j, i)
                 elif self.game_map[i][j] == "p1flag":
-                    self.flag_1.current_position = [j, i,]
-                    self.flag_1.rect.topleft = (x_coordinate, y_coordinate)
+                    self.update_flags(self.flag_1, j, i)
                 elif self.game_map[i][j] == "p2flag":
-                    self.flag_2.current_position = [j, i,]
-                    self.flag_2.rect.topleft = (x_coordinate, y_coordinate)
+                    self.update_flags(self.flag_2, j, i)
 
-        self.all_sprites.add(self.visible_sprites, self.obstacle_sprites)
+    def update_players(self, player, p1orp2, j, i):
+        """Updates the players location on the screen.
 
-    def draw_map(self):
-        self.visible_sprites.draw(self.display_surface)
-        self.visible_sprites.update()
+        Args:
+            player: A reference to the player.
+            p1orp2: A number used to identify the player.
+            j: The player's locations x-coordinate.
+            i: The player's locations y-coordinate.
+        """
+
+        if p1orp2 == 1:
+            flag = self.flag_2
+        else:
+            flag = self.flag_1
+        x_coordinate = j * services.settings.TILESIZE
+        y_coordinate = i * services.settings.TILESIZE
+        if player.has_flag:
+            flag.current_position = [j, i,]
+            flag.rect.topleft = (x_coordinate, y_coordinate)
+        player.pos = [j, i,]
+        player.rect.topleft = (x_coordinate, y_coordinate)
+
+    def update_flags(self, flag, j, i):
+        """Updates the flags location on the screen.
+
+        Args:
+            flag: A reference to the flag.
+            j: The flag's locations x-coordinate.
+            i: The flag's locations y-coordinate.
+        """
+
+        x_coordinate = j * services.settings.TILESIZE
+        y_coordinate = i * services.settings.TILESIZE
+        flag.current_position = [j, i,]
+        flag.rect.topleft = (x_coordinate, y_coordinate)
 
     def reset_flag1(self, player_two):
+        """Relocates the first player's flag to its original location.
+
+        Args:
+            player_two: : A reference to the player2 attribute of the GameLoop class.
+        """
+
         self.flag_1.current_position = self.flag_1.original_position
-        x_coordinate = self.flag_1_coordinates[0]
-        y_coordinate = self.flag_1_coordinates[1]
+        x_coordinate = self.flag_1_original_coordinates[0]
+        y_coordinate = self.flag_1_original_coordinates[1]
         self.game_map[x_coordinate][y_coordinate] = "p1flag"
         player_two.reset_flag = False
 
     def reset_flag2(self, player_one):
+        """Relocates the second player's flag to its original location.
+
+        Args:
+            player_one: : A reference to the player1 attribute of the GameLoop class.
+        """
+
         self.flag_2.current_position = self.flag_2.original_position
-        x_coordinate = self.flag_2_coordinates[0]
-        y_coordinate = self.flag_2_coordinates[1]
+        x_coordinate = self.flag_2_original_coordinates[0]
+        y_coordinate = self.flag_2_original_coordinates[1]
         self.game_map[x_coordinate][y_coordinate] = "p2flag"
         player_one.reset_flag = False
