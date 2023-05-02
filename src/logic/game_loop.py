@@ -88,8 +88,8 @@ class GameLoop:
         """
 
         if not self.current_player is None:
-            self.game_map[self.current_player.pos[1]][self.current_player.pos[0]
-                                                      ] = "p" + str(self.current_player.p1orp2)
+            self.game_map[self.current_player.pos[1]]\
+                [self.current_player.pos[0]] = "p" + str(self.current_player.p1orp2)
         if self.current_turn == 1:
             self.current_turn = 2
             self.current_player = self.player2

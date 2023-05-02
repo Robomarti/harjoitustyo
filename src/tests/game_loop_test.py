@@ -46,9 +46,9 @@ class TestGameLoop(unittest.TestCase):
         self.assertEqual(self.loop.current_turn, 1)
 
     def test_change_turns_works(self):
-        self.loop._change_turns()
+        self.loop.change_turns()
         self.assertEqual(self.loop.current_turn, 2)
-        self.loop._change_turns()
+        self.loop.change_turns()
         self.assertEqual(self.loop.current_turn, 3)
-        self.loop._change_turns()
+        self.loop.change_turns()
         self.assertEqual(self.loop.current_turn, 1)

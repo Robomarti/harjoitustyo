@@ -33,7 +33,7 @@ def detect_collisions(player_one, player_two, projectile_one, projectile_two, ga
         [projectile2_position[0]] == "x":
         projectile_two.die()
 
-def handle_player_death(game_map, player, projectile, p1orp2):
+def handle_player_death(game_map, player, projectile, p1orp2: str):
     """Do the necessary actions when a projectile collides with a player
 
     Args:
@@ -44,9 +44,14 @@ def handle_player_death(game_map, player, projectile, p1orp2):
     """
 
     game_map[player.pos[1]][player.pos[0]] = " "
-    death_point_1 = copy.deepcopy(player.pos)
+    death_point = copy.deepcopy(player.pos)
+    if p1orp2 == "p1":
+        opponent_flag = "p2"
+    else:
+        opponent_flag = "p1"
+
     if player.has_flag:
-        game_map[death_point_1[1]][death_point_1[0]] = "p2flag"
+        game_map[death_point[1]][death_point[0]] = opponent_flag + "flag"
         player.has_flag = False
     player.die()
     projectile.die()

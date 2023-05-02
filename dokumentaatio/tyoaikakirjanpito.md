@@ -17,5 +17,5 @@
 | 24.4.2023 | 2 | Lisäsin pisteiden keräämisen ja korjasin pitkäaikaisen bugin, jossa pelaaja 1 pystyi liikkumaan kaksi kertaa ensimmäisen vuoronsa aikana. |
 | 24.4.2023 | 3 | Sain lippujen toiminnallisuudet valmiiksi, ja lisäsin ja korjasin player- ja game_loop- testejä. |
 | 1.5.2023 | 2 | Jatkoin ammusten ohjelmointia |
-| 2.5.2023 | 4 | Sain ammukset valmiiksi. Siirsin _handle_events funktion omaan tiedostoon selkeyden vuoksi. Aloitin docstring-dokumentoinnin. Vähensin pylint-virheitä. |
+| 2.5.2023 | 4 | Sain ammukset valmiiksi. Siirsin _handle_events funktion omaan tiedostoon selkeyden vuoksi. Aloitin docstring-dokumentoinnin. Vähensin pylint-virheitä. Lisäsin testejä. |
 | Yht. | 32 | |
