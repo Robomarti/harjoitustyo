@@ -26,7 +26,7 @@ poetry run invoke test
 ```bash
 poetry run invoke coverage-report
 ```
-Raportti generoituu hakemistoon nimeltä htmlcov
+Komento tekee samalla raporttiin vaaditut testit. Raportti generoituu hakemistoon nimeltä htmlcov.
 
 - Ohjelman pylint-tarkistukset voi suorittaa komennolla
 ```bash

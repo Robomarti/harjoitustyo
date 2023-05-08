@@ -67,12 +67,18 @@ class GameLoop:
     def start(self):
         """The main loop that keeps the application running.
 
-        Certain inputs will close the application by breaking out of the while statement.
+        Pressing the x button on the top of the screen or the N key on the keyboard will close 
+        the application by breaking out of the while statement. Pressing the key Y will restart the application
+        by doing the same.
         """
 
         while True:
-            if handle_events(self) == False:  # pylint: disable=singleton-comparison
-                break
+            events = handle_events(self)
+            if events == False:  # pylint: disable=singleton-comparison
+                return False     # The course material tells to do it like this, and if changed
+            if events == True:   # into "if not events", the application will close itself
+                return True      # as soon as it has been opened.
+
             self._render()
             self._clock.tick(services.settings.FPS)
 
@@ -87,27 +93,44 @@ class GameLoop:
 
         """
 
-        if not self.current_player is None:
+        if self.current_player is not None:
             self.game_map[self.current_player.pos[1]]\
                 [self.current_player.pos[0]] = "p" + str(self.current_player.p1orp2)
         if self.current_turn == 1:
             self.current_turn = 2
-            self.current_player = self.player2
-            self.current_projectile = self.p2_projectile
         elif self.current_turn == 2:
             self.current_turn = 3
+            self.current_player = self.player2
+            self.current_projectile = self.p2_projectile
+        elif self.current_turn == 3:
+            self.current_turn = 4
+        elif self.current_turn == 4:
+            self.current_turn = 5
             self.current_player = None
-            self.player1.apply_real_position()
-            self.player2.apply_real_position()
+            self.apply_player_positions()
         else:
             self.current_turn = 1
             self.current_player = self.player1
             self.current_projectile = self.p1_projectile
             self.turns -= 1
 
+    def apply_player_positions(self):
+        self.player1.apply_real_position()
+        self.player2.apply_real_position()
+
     def _render(self):
         """Renders images to the screen.
 
         """
 
-        self._renderer.render(self.turns, self.player1, self.player2)
+        if self.turns <= 0:
+            self._renderer.render_game_over(self.player1, self.player2)
+            self.current_turn = 10
+        elif self.current_turn == 1:
+            self._renderer.render_player_one_turn()
+        elif self.current_turn == 3:
+            self._renderer.render_player_two_turn()
+        elif self.current_turn == 10:
+            self._renderer.render_play_again()
+        else:
+            self._renderer.render_game(self.turns, self.player1, self.player2)

@@ -2,24 +2,30 @@ import pygame
 import services.level
 import services.settings
 import logic.game_loop
-
 import pygame_essentials.clock
 import pygame_essentials.event_queue
 
 
 def main():
-    display = pygame.display.set_mode(
+    """A method that starts, restarts and closes the game.
+
+    This creates new instances of classes so that everything
+    gets reset between games.
+    """
+
+    while True:
+        display = pygame.display.set_mode(
         (services.settings.WIDTH, services.settings.HEIGHT))
-    pygame.display.set_caption("Capture The Flag")
-
-    game_clock = pygame_essentials.clock.Clock()
-    game_level = services.level.Level()
-    game_event_queue = pygame_essentials.event_queue.EventQueue()
-    loop = logic.game_loop.GameLoop(
+        pygame.display.set_caption("Capture The Flag")
+        game_clock = pygame_essentials.clock.Clock()
+        game_level = services.level.Level()
+        game_event_queue = pygame_essentials.event_queue.EventQueue()
+        loop = logic.game_loop.GameLoop(
         game_level, display, game_event_queue, game_clock)
+        pygame.init()
 
-    pygame.init()
-    loop.start()
+        if loop.start() is False:
+            break
 
 
 if __name__ == "__main__":

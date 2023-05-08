@@ -18,3 +18,6 @@
 ## Viikko 6
 - Saatiin ammusten toiminnallisuudet valmiiksi.
 - Siirrettiin tiedoston game_loop.py _handle_events funktio omaan tiedostoon event_handler.py selkeyden vuoksi.
+
+## Viikko 7
+- Saatiin pelin loppuminen ja uudelleenpelaaminen valmiiksi.

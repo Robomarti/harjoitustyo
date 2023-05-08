@@ -7,12 +7,14 @@ def handle_events(game_loop):
 
     Args:
         game_loop: A reference to the GameLoop class that is calling this method.
-
     """
 
     # pylint: disable=inconsistent-return-statements
     # According to the course material, this is a
-    # good way of handling exit inputs.
+    # good way of handling exit inputs. Also, if
+    # I returned for every event, it would exit the for loop
+    # every time, resulting in some inputs such as the close inputs
+    # to not work at all.
 
     if game_loop.player1.reset_flag:
         game_loop.level.reset_flag2(game_loop.player1)
@@ -30,9 +32,22 @@ def handle_events(game_loop):
             game_loop.current_projectile.target_location = [pos[0], pos[1]]
             game_loop.current_projectile.calculate_vector()
         if event.type == pygame.KEYUP:
+            if event.key == pygame.K_n:
+                return False
+            if event.key == pygame.K_y:
+                return True
             handle_key_ups(event, game_loop)
 
 def handle_key_ups(event, game_loop):
+    """A method that handles inputs that are the type of KEYUP from players.
+
+    KEYUP means that the input is taken into consideration only when the the user
+    lets go of the key, so that we don't get 60 or more inputs of the same key every second.
+
+    Args:
+        game_loop: A reference to the GameLoop class that is calling this method.
+    """
+
     if event.key == pygame.K_UP and not game_loop.current_player is None:
         game_loop.game_map[game_loop.current_player.pos[1]
                            ][game_loop.current_player.pos[0]] = " "

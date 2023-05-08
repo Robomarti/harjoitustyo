@@ -18,4 +18,6 @@
 | 24.4.2023 | 3 | Sain lippujen toiminnallisuudet valmiiksi, ja lisäsin ja korjasin player- ja game_loop- testejä. |
 | 1.5.2023 | 2 | Jatkoin ammusten ohjelmointia |
 | 2.5.2023 | 5 | Sain ammukset valmiiksi. Siirsin _handle_events funktion omaan tiedostoon selkeyden vuoksi. Aloitin docstring-dokumentoinnin. Vähensin pylint-virheitä. Lisäsin testejä. |
-| Yht. | 33 | |
+| 6.5.2023 | 3 | Lisäsin grafiikat pelin loppumista sekä vuorojen vaihtoa varten, sekä itse pelin loppumisen kun pelivuoroja on jäljellä 0. |
+| 8.5.2023 | 1 | Sain pelin loppumisen ja uudelleenpelaamisen valmiiksi. |
+| Yht. | 36 | |
