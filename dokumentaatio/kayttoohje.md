@@ -2,7 +2,7 @@
 
 ## Pelin asennus
 
-Lataa viimeisin release.
+Lataa [viimeisin julkaisu](https://github.com/Robomarti/harjoitustyo/releases/latest).
 
 - Asenna riippuvuudet komennolla 
 ```bash
@@ -22,3 +22,5 @@ Ammuksia ammutaan klikkaamalla hiirellä siihen kohtaan ruutua, johon oletat
 vastustajasi liikkuvan. Pelaajilla on vain yksi ammus, joten uuden kohdan klikkaaminen ei luo uutta ammusta, vaan vaihtaa oman ammuksen suuntaa.
 
 Viedessään vastustajan lipun omaan maaliinsa, pelaaja ei liiku näytöllä, mutta hänen liikkumisensa on vuoron osalta käytetty.
+
+Pelin ulkonäköä ja pituutta voi muokkaa "services" -hakemiston "settings.py" -tiedoston kautta. Huomaathan että virheellisten muokkausten suorittaminen voi aiheuttaa pelin kaatumisen, eikä tiedoston oikeellisuudelle ole testiä tällä hetkellä.
