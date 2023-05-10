@@ -16,6 +16,8 @@ vastustajasi liikkuvan. Pelaajilla on vain yksi ammus, joten uuden kohdan klikka
 
 - [Arkkitehtuuri](https://github.com/Robomarti/harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
+- [Testausdokumentti](https://github.com/Robomarti/harjoitustyo/blob/master/dokumentaatio/testaus.md)
+
 ## Pelin asennus
 
 - Asenna riippuvuudet komennolla 

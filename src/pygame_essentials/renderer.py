@@ -1,4 +1,3 @@
-import time
 import pygame
 import ui.uiLayer
 
@@ -62,7 +61,6 @@ class Renderer:
             image = pygame.image.load("src/assets/tie_image.png").convert()
         self._display.blit(image, (0,0))
         pygame.display.update()
-        time.sleep(1)
 
     def render_play_again(self):
         """Renders a simple image to the screen asking if the players want to play again.

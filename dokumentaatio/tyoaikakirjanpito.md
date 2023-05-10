@@ -20,5 +20,5 @@
 | 2.5.2023 | 5 | Sain ammukset valmiiksi. Siirsin _handle_events funktion omaan tiedostoon selkeyden vuoksi. Aloitin docstring-dokumentoinnin. Vähensin pylint-virheitä. Lisäsin testejä. |
 | 6.5.2023 | 3 | Lisäsin grafiikat pelin loppumista sekä vuorojen vaihtoa varten, sekä itse pelin loppumisen kun pelivuoroja on jäljellä 0. |
 | 8.5.2023 | 2 | Sain pelin loppumisen ja uudelleenpelaamisen valmiiksi. Vähensin pylint virheitä |
-| 10.5.2023 | 5 | Sain pelaajien todellisen sijainnin pysymään toisiltaan salassa kunnes viimeinen osa vuorosta tapahtuu. Lisäsin myös pelin muokattavuutta settings.py tiedoston kautta. Lisäsin testikattavuutta. |
-| Yht. | 42 | |
+| 10.5.2023 | 6 | Sain pelaajien todellisen sijainnin pysymään toisiltaan salassa kunnes viimeinen osa vuorosta tapahtuu. Lisäsin myös pelin muokattavuutta settings.py tiedoston kautta. Lisäsin testikattavuutta ja dokumentaatiota. |
+| Yht. | 43 | |

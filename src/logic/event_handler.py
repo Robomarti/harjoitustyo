@@ -3,7 +3,7 @@ import services.settings
 
 
 def handle_events(game_loop):
-    """A method that handles inputs from players.
+    """A method that handles inputs from players and the resetting of the flags.
 
     Args:
         game_loop: A reference to the GameLoop class that is calling this method.
@@ -12,9 +12,9 @@ def handle_events(game_loop):
     # pylint: disable=inconsistent-return-statements
     # According to the course material, this is a
     # good way of handling exit inputs. Also, if
-    # I returned for every event, it would exit the for loop
-    # every time, resulting in some inputs such as the close inputs
-    # to not work at all.
+    # the method returned a value for every event, it would exit 
+    # the for loop every time, resulting in some inputs such as 
+    # the close inputs to not work at all.
 
     if game_loop.player1.reset_flag:
         game_loop.level.reset_flag2(game_loop.player1)

@@ -111,6 +111,8 @@ class GameLoop:
             self.current_turn = 5
             self.current_player = None
             self.apply_player_positions()
+        elif self.current_turn == 10:
+            self.current_turn = 11
         else:
             self.current_turn = 1
             self.current_player = self.player1
@@ -148,7 +150,7 @@ class GameLoop:
             self._renderer.render_player_one_turn()
         elif self.current_turn == 3:
             self._renderer.render_player_two_turn()
-        elif self.current_turn == 10:
+        elif self.current_turn == 11:
             self._renderer.render_play_again()
         else:
             self._renderer.render_game(self.turns, self.player1, self.player2)
