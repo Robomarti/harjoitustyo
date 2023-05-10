@@ -1,8 +1,6 @@
-WIDTH = 1024
-HEIGHT = 704
 FPS = 60
 TILESIZE = 64
-TURNS = 10
+TURNS = 30
 
 MAP = [
     ["x", "x", "x", "x", "x", "x", "x", "x",

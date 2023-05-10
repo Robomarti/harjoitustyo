@@ -62,27 +62,30 @@ class GameLoop:
 
         self._renderer = pygame_essentials.renderer.Renderer(
             display, self.level, self.p1_projectile, self.p2_projectile)
-        self.turns = 30
+        self.turns = copy.copy(services.settings.TURNS)
 
     def start(self):
         """The main loop that keeps the application running.
 
         Pressing the x button on the top of the screen or the N key on the keyboard will close 
-        the application by breaking out of the while statement. Pressing the key Y will restart the application
-        by doing the same.
+        the application by breaking out of the while statement. Pressing the key Y will restart
+        the application by doing the same.
         """
 
         while True:
             events = handle_events(self)
             if events == False:  # pylint: disable=singleton-comparison
-                return False     # The course material tells to do it like this, and if changed
-            if events == True:   # into "if not events", the application will close itself
-                return True      # as soon as it has been opened.
+                return False     # The course material tells to do it like this, and if changed...
+            if events == True:   # pylint: disable=singleton-comparison
+                return True      # ... into "if not events", the application will close itself
+                                 # as soon as it has been opened.
 
             self._render()
             self._clock.tick(services.settings.FPS)
 
-            if self.current_turn == 3:
+            self.handle_player_positions()
+
+            if self.current_turn == 5:
                 detect_collisions(
                     self.player1, self.player2, self.p1_projectile,
                     self.p2_projectile, self.game_map)
@@ -114,13 +117,28 @@ class GameLoop:
             self.current_projectile = self.p1_projectile
             self.turns -= 1
 
+    def handle_player_positions(self):
+        """Makes sure that the players do not see each other until the phase of
+        the turn where the projectiles move.
+        """
+
+        if self.current_turn in (3,4):
+            self.player1.rendering_pos = self.player1.real_pos
+            self.player2.rendering_pos = self.player2.pos
+        else:
+            self.player1.rendering_pos = self.player1.pos
+            self.player2.rendering_pos = self.player2.real_pos
+
     def apply_player_positions(self):
+        """Applies the player positions so that the projectiles will hit them
+        correctly.
+        """
+
         self.player1.apply_real_position()
         self.player2.apply_real_position()
 
     def _render(self):
         """Renders images to the screen.
-
         """
 
         if self.turns <= 0:

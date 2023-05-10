@@ -8,7 +8,7 @@ class Flag(pygame.sprite.Sprite):
         image: A reference to the image of the flag.
         original_location: A reference to the respawn location of the flag.
         current_position: The current location in an array form. Used to draw the flag.
-        rect: A reference to the pygame object responsible for storing rectangular coordinates
+        rect: A reference to the pygame object responsible for storing rectangular coordinates.
     """
 
     def __init__(self, location, groups, image_num):

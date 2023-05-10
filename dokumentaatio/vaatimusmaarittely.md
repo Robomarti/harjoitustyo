@@ -25,7 +25,7 @@ Sovelluksen tarkoitus on olla pieni kaksinpelattava peli, jossa pelaajat yrittä
   - Hyökätessään pelaaja voi ampua haluamaansa suuntaan. TEHTY
     - Jos pelaaja osuu toiseen pelaajaan, pelaaja johon hän osui palaa takaisin kohtaan, josta hän aloitti pelin. TEHTY
       - Jos osuttu pelaaja oli kantamassa toisen pelaajan lippua, lippu jää siihen kohtaan mihin hän "kuoli". TEHTY
-- Molemmilla pelaajilla on käytettävänään ~~10~~ 30 vuoroa ennen kuin peli päättyy. (Päivitetty kun huomasin että 10 vuoroa menee liian nopeasti ohi.)
+- Molemmilla pelaajilla on käytettävänään ~~10~~ 30 vuoroa ennen kuin peli päättyy. (Päivitetty kun huomasin että 10 vuoroa menee liian nopeasti ohi.) TEHTY
   
 ### Pelin päätös
 
@@ -38,5 +38,5 @@ Perusversion jälkeen peliin lisätään seuraavat toiminnallisuudet ajan sallie
 
 - Pelaajat voivat valita itselleen nimet
 - Pelaajia voi olla useampi kuin 2
-- Koko pelin pituutta voi vaihtaa
+- Koko pelin pituutta voi vaihtaa TEHTY
 - Pelin voi tallentaa jokaisen vuoron jälkeen, ja siihen voi palata myöhemmin

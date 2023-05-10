@@ -1,7 +1,20 @@
 # Capture The Flag
 
 Pelin idea on liikkua vastustajan takana olevalle lipulle, siepata se, ja liikkua takaisin omalle maalille ilman, että vastustaja osuu sinuun ammuksellaan. Pelissä liikutaan nuolinäppäimillä, ja vuoroa vaihdetaan välilyönnistä. Pelaaja numero 2:den vuoron jälkeen on "vuoro 3" jolloin ammukset liikkuvat (ja pelaajat kun olen saanut sen toimimaan).
-Sen voi ohittaa painamalla välilyöntiä heti.
+Sen voi teknillisesti ohittaa painamalla välilyöntiä heti, mutta silloin ammukset eivät osu pelaajiin. Ammuksia ammutaan klikkaamalla hiirellä siihen kohtaan ruutua, johon oletat
+vastustajasi liikkuvan. Pelaajilla on vain yksi ammus, joten uuden kohdan klikkaaminen ei luo uutta ammusta, vaan vaihtaa oman ammuksen suuntaa.
+
+## Dokumentaatio:
+
+- [Käyttöohje](https://github.com/Robomarti/harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
+
+- [Vaatimusmäärittely](https://github.com/Robomarti/harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+
+- [Työaikakirjanpito](https://github.com/Robomarti/harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
+
+- [Changelog](https://github.com/Robomarti/harjoitustyo/blob/master/dokumentaatio/changelog.md)
+
+- [Arkkitehtuuri](https://github.com/Robomarti/harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
 ## Pelin asennus
 
@@ -36,12 +49,8 @@ poetry run invoke lint
 ## Viikko 5 release:
 [Löytyy täältä](https://github.com/Robomarti/harjoitustyo/releases/tag/viikko5)
 
-## Dokumentaatio:
+## Viikko 6 release:
+[Löytyy täältä](https://github.com/Robomarti/harjoitustyo/releases/tag/viikko6)
 
-- [Vaatimusmäärittely](https://github.com/Robomarti/harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
-
-- [Työaikakirjanpito](https://github.com/Robomarti/harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
-
-- [Changelog](https://github.com/Robomarti/harjoitustyo/blob/master/dokumentaatio/changelog.md)
-
-- [Arkkitehtuuri](https://github.com/Robomarti/harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+## Viikko 7 release:
+[Löytyy täältä](https://github.com/Robomarti/harjoitustyo/releases/tag/viikko7)

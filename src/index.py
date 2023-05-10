@@ -14,8 +14,9 @@ def main():
     """
 
     while True:
-        display = pygame.display.set_mode(
-        (services.settings.WIDTH, services.settings.HEIGHT))
+        display_width = services.settings.TILESIZE * len(services.settings.MAP[0])
+        display_height = services.settings.TILESIZE * len(services.settings.MAP)
+        display = pygame.display.set_mode((display_width, display_height))
         pygame.display.set_caption("Capture The Flag")
         game_clock = pygame_essentials.clock.Clock()
         game_level = services.level.Level()

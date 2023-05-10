@@ -55,6 +55,16 @@ class Level:
                 self.create_assets(i, j, x_coordinate, y_coordinate)
 
     def create_assets(self, i, j, x_coordinate, y_coordinate):
+        """Creates new sprites (graphics) for the map.
+        Also sets the respawn positions for the players and flags.
+
+        Args:
+            i: the y-coordinate where the object should be checked from game_map.
+            j: the x-coordinate where the object should be checked from game_map.
+            x_coordinate: the y-coordinate where the sprite should be spawned.
+            y_coordinate: the x-coordinate where the sprite should be spawned.
+        """
+
         # pylint: disable=too-many-statements
         # All the statements are needed, and there is little
         # point in making another method using them.
@@ -97,16 +107,16 @@ class Level:
         for i in range(height):
             for j in range(width):
                 if self.game_map[i][j] == "p1":
-                    self.update_players(self.player_one, 1, j, i)
+                    self.update_player(self.player_one, 1, j, i)
                 elif self.game_map[i][j] == "p2":
-                    self.update_players(self.player_two, 2, j, i)
+                    self.update_player(self.player_two, 2, j, i)
                 elif self.game_map[i][j] == "p1flag":
                     self.update_flags(self.flag_1, j, i)
                 elif self.game_map[i][j] == "p2flag":
                     self.update_flags(self.flag_2, j, i)
 
-    def update_players(self, player, p1orp2, j, i):
-        """Updates the players location on the screen.
+    def update_player(self, player, p1orp2, j, i):
+        """Updates the player's location on the screen.
 
         Args:
             player: A reference to the player.
@@ -125,7 +135,9 @@ class Level:
             flag.current_position = [j, i,]
             flag.rect.topleft = (x_coordinate, y_coordinate)
         player.pos = [j, i,]
-        player.rect.topleft = (x_coordinate, y_coordinate)
+        render_pos_x = player.rendering_pos[0] * services.settings.TILESIZE
+        render_pos_y = player.rendering_pos[1] * services.settings.TILESIZE
+        player.rect.topleft = (render_pos_x, render_pos_y)
 
     def update_flags(self, flag, j, i):
         """Updates the flags location on the screen.
