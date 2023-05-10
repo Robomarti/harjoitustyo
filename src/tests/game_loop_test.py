@@ -31,7 +31,6 @@ class StubRenderer:
     def render(self):
         pass
 
-
 class TestGameLoop(unittest.TestCase):
     def setUp(self):
         display = pygame.display.set_mode((1, 1))
@@ -56,3 +55,13 @@ class TestGameLoop(unittest.TestCase):
         self.assertEqual(self.loop.current_turn, 5)
         self.loop.change_turns()
         self.assertEqual(self.loop.current_turn, 1)
+
+    def test_handle_player_positions_works(self):
+        self.loop.player1.pos = 0
+        self.loop.player1.real_pos = 1
+        self.loop.player1.rendering_pos = 2
+        self.loop.handle_player_positions()
+        self.assertEqual(self.loop.player1.rendering_pos, 0)
+        self.loop.current_turn = 3
+        self.loop.handle_player_positions()
+        self.assertEqual(self.loop.player1.rendering_pos, 1)

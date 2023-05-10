@@ -17,8 +17,9 @@ class Flag(pygame.sprite.Sprite):
         Args:
             location: The first place where the flag spawns, and its respawn location.
             groups: An array of the sprite groups that the flag should be a part of.
-            image_num: A number that is used to determine which flag image should be used for this instance of the class.
-        """  # pylint: disable=line-too-long
+            image_num: A number that is used to determine which flag image should be 
+            used for this instance of the class.
+        """
 
         super().__init__(groups)
         if image_num == 1:

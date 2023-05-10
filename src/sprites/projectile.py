@@ -2,15 +2,17 @@ import services.settings
 
 
 class Projectile():
-    """A class that is responsible for calculating the location, radius and color of the projectiles used in the game.
+    """A class that is responsible for calculating the location, radius and color of the
+    projectiles used in the game.
 
     Attributes:
-        location: The current location of the projectile. This is used to draw the projectile, and to detect its collisions.
+        location: The current location of the projectile. This is used to draw the projectile,
+        and to detect its collisions.
         target_location: The location where the projectile should travel.
         radius: The radius of the projectile, impacts how the projectile is drawn.
         vector: The distance that the projectile travels per frame.
         color: The color of the projectile, impacts how the projectile is drawn.
-    """  # pylint: disable=line-too-long
+    """
 
     def __init__(self):
         """The constructor of the class.

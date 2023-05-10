@@ -2,7 +2,18 @@ import pygame
 
 
 class Tile(pygame.sprite.Sprite):
+    """A sprite for displaying the walls and goals of the map.    
+    """
+
     def __init__(self, position, groups, image_num):
+        """The constructor of the class
+
+        Args:
+            position: The position where the sprite should be drawn.
+            groups: An array of the sprite groups that the flag should be a part of.
+            image_num: Tells which image should be drawn.
+        """
+
         super().__init__(groups)
         if image_num == 1:
             self.image = pygame.image.load(

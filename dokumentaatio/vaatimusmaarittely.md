@@ -15,8 +15,8 @@ Sovelluksen tarkoitus on olla pieni kaksinpelattava peli, jossa pelaajat yrittä
 ### Pelin pelaaminen
 
 - Peliä pelataan vuorotellen samalla tietokoneella, pelaaja 1 aloittaa. TEHTY
-- Vuorot pelataan salassa, esimerkiksi kääntämällä näytön poispäin toisesta pelaajasta
-- Aika on "pysähtynyt" vuorojen aikana, ja molempien pelaajien toiminnot tapahtuvat samaan aikaan, kun pelaaja 2 on valmis lopettamaan vuoronsa.
+- Vuorot pelataan salassa, esimerkiksi kääntämällä näytön poispäin toisesta pelaajasta TEHTY
+- Aika on "pysähtynyt" vuorojen aikana, ja molempien pelaajien toiminnot tapahtuvat samaan aikaan, kun pelaaja 2 on valmis lopettamaan vuoronsa. TEHTY
 - Vuoronsa aikana pelaajalla on kaksi mahdollista toimintoa: Liiku ja hyökkää TEHTY
   - Pelaaja voi tehdä molemmat toiminnot missä järjestyksessä tahansa. TEHTY
   - Liikkuessaan pelaaja voi liikkua tietyn etäisyyden haluamaansa suuntaan. TEHTY
@@ -30,7 +30,7 @@ Sovelluksen tarkoitus on olla pieni kaksinpelattava peli, jossa pelaajat yrittä
 ### Pelin päätös
 
   - Pelaajien pisteet lasketaan, ja tallennetaan tietokantaan. Loppunäytössä näytetään molempien pelaajien omat ennätyspistemäärät kaikkien pelien väliltä.
-  - Pelaajille näytetään "Pelaa uudestaan"-nappi.
+  - Pelaajille näytetään "Pelaa uudestaan"-~nappi~ näyttö. TEHTY
 
 ## Jatkokehitysideoita
 
