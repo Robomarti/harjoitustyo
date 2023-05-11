@@ -21,4 +21,5 @@
 | 6.5.2023 | 3 | Lisäsin grafiikat pelin loppumista sekä vuorojen vaihtoa varten, sekä itse pelin loppumisen kun pelivuoroja on jäljellä 0. |
 | 8.5.2023 | 2 | Sain pelin loppumisen ja uudelleenpelaamisen valmiiksi. Vähensin pylint virheitä |
 | 10.5.2023 | 6 | Sain pelaajien todellisen sijainnin pysymään toisiltaan salassa kunnes viimeinen osa vuorosta tapahtuu. Lisäsin myös pelin muokattavuutta settings.py tiedoston kautta. Lisäsin testikattavuutta ja dokumentaatiota. |
+| 11.5.2023 | 2 | Lisäsin dokumentaatiota. Lisäsin pisteidensaannin vastustajaan osumisesta, sekä maalien käytön suojana. |
 | Yht. | 43 | |

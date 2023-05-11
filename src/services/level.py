@@ -129,15 +129,14 @@ class Level:
             flag = self.flag_2
         else:
             flag = self.flag_1
-        x_coordinate = j * services.settings.TILESIZE
-        y_coordinate = i * services.settings.TILESIZE
-        if player.has_flag:
-            flag.current_position = [j, i,]
-            flag.rect.topleft = (x_coordinate, y_coordinate)
+
         player.pos = [j, i,]
         render_pos_x = player.rendering_pos[0] * services.settings.TILESIZE
         render_pos_y = player.rendering_pos[1] * services.settings.TILESIZE
         player.rect.topleft = (render_pos_x, render_pos_y)
+        if player.has_flag:
+            flag.current_position = [j, i,]
+            flag.rect.topleft = (render_pos_x, render_pos_y)
 
     def update_flags(self, flag, j, i):
         """Updates the flags location on the screen.

@@ -21,6 +21,12 @@ Sen voi teknillisesti ohittaa painamalla välilyöntiä heti, mutta silloin ammu
 Ammuksia ammutaan klikkaamalla hiirellä siihen kohtaan ruutua, johon oletat
 vastustajasi liikkuvan. Pelaajilla on vain yksi ammus, joten uuden kohdan klikkaaminen ei luo uutta ammusta, vaan vaihtaa oman ammuksen suuntaa.
 
+Pelaaja saa yhden pisteen osuessaan vastustajansa ammuksellaan, sekä kaksi pistettä viedessään vastustajan lipun omaan maaliinsa. Pelaajat voivat käyttää maaleja esteinä heidän ja vastustajan ammusten välillä.
+
 Viedessään vastustajan lipun omaan maaliinsa, pelaaja ei liiku näytöllä, mutta hänen liikkumisensa on vuoron osalta käytetty.
+
+Pelaajat ei normaalisti voi liikkua oman lippunsa päältä, ettei omaa lippua voi vartioida liian tiukasti. Jos oma lippu on pudonnut samaan kohtaan mihin synnyt kun olet kuollut, niin tämä todennäköisesti poistaa lipun koko pelistä.
+
+Pelaajat voivat olla sisäkkäin, jos he molemmat liikkuvat samaan ruutuun. Tällöin vain toisen pelaajan grafiikka näkyy pelaajille. Tämän ei pitäisi muuttaa peliä mitenkään.
 
 Pelin ulkonäköä ja pituutta voi muokkaa "services" -hakemiston "settings.py" -tiedoston kautta. Huomaathan että virheellisten muokkausten suorittaminen voi aiheuttaa pelin kaatumisen, eikä tiedoston oikeellisuudelle ole testiä tällä hetkellä.

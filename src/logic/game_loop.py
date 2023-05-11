@@ -114,10 +114,13 @@ class GameLoop:
         elif self.current_turn == 10:
             self.current_turn = 11
         else:
-            self.current_turn = 1
-            self.current_player = self.player1
-            self.current_projectile = self.p1_projectile
-            self.turns -= 1
+            self.handle_turn_change()
+
+    def handle_turn_change(self):
+        self.current_turn = 1
+        self.current_player = self.player1
+        self.current_projectile = self.p1_projectile
+        self.turns -= 1
 
     def handle_player_positions(self):
         """Makes sure that the players do not see each other until the phase of

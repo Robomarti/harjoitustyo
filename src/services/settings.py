@@ -6,8 +6,8 @@ please download it again from the github page.
 Attributes:
     FPS: Indicates how many times in a frame the game updates. Both the 
     screen and the logic will be updated this many times in a second.
-    TILESIZE: Tells how many pixels large each image in the assets folder is.
-    All images in the folder must be the same size.
+    TILESIZE: Tells how many pixels large and wide each image in the assets folder
+    is. All images in the folder must be the same size.
     TURNS: Tells how many turns the game should have.
     MAP: A layout of the games arena.
 """

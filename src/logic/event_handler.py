@@ -12,8 +12,8 @@ def handle_events(game_loop):
     # pylint: disable=inconsistent-return-statements
     # According to the course material, this is a
     # good way of handling exit inputs. Also, if
-    # the method returned a value for every event, it would exit 
-    # the for loop every time, resulting in some inputs such as 
+    # the method returned a value for every event, it would exit
+    # the for loop every time, resulting in some inputs such as
     # the close inputs to not work at all.
 
     if game_loop.player1.reset_flag:

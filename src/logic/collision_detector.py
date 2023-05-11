@@ -21,19 +21,21 @@ def detect_collisions(player_one, player_two, projectile_one, projectile_two, ga
                             int(projectile_two.location[1] / services.settings.TILESIZE)]
 
     if projectile2_position == player_one.real_pos:
-        handle_player_death(game_map, player_one, projectile_two, "p1")
+        handle_player_death(game_map, player_one, player_two, projectile_two, "p1")
 
     if projectile1_position == player_two.real_pos:
-        handle_player_death(game_map, player_two, projectile_one, "p2")
+        handle_player_death(game_map, player_two, player_one, projectile_one, "p2")
+
+    walls = ["x", "p1gu", "p1g", "p1gl", "p2gu", "p2g", "p2gl"]
 
     if projectile_one.location[0] >= 0 and game_map[projectile1_position[1]]\
-        [projectile1_position[0]] == "x":
+        [projectile1_position[0]] in walls:
         projectile_one.die()
     if projectile_two.location[0] >= 0 and game_map[projectile2_position[1]]\
-        [projectile2_position[0]] == "x":
+        [projectile2_position[0]] in walls:
         projectile_two.die()
 
-def handle_player_death(game_map, player, projectile, p1orp2: str):
+def handle_player_death(game_map, player, killer, projectile, p1orp2: str):
     """Do the necessary actions when a projectile collides with a player
 
     Args:
@@ -43,6 +45,7 @@ def handle_player_death(game_map, player, projectile, p1orp2: str):
         p1orp2: A string to be used in the matrix represantation of the game_map.
     """
 
+    killer.add_point_from_a_kill()
     game_map[player.pos[1]][player.pos[0]] = " "
     death_point = copy.deepcopy(player.pos)
     if p1orp2 == "p1":

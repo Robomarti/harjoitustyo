@@ -23,3 +23,4 @@
 - Saatiin pelin loppuminen ja uudelleenpelaaminen valmiiksi.
 - Saatiin pelaajat pysymään toisiltaan piilossa vuoron viimeiseen vaiheeseen asti.
 - Lisättiin pelien mukauttamista settings.py tiedoston avulla.
+- Lisättiin pisteiden saaminen vastustajaan osumisesta.

@@ -91,7 +91,7 @@ class Player(pygame.sprite.Sprite):
         can_move_to_wanted_pos = self.can_move and \
             wanted_pos in " "+"p"+str(self.opponent_num)+"flag"
         if wanted_pos in self.goal and self.has_flag:
-            self._add_point()
+            self.add_point()
         elif abs(self.pos[1] - self.real_pos[1]) == 0 and can_move_to_wanted_pos:
             self.pos[1] -= 1
             self.pos[0] = self.real_pos[0]
@@ -105,7 +105,7 @@ class Player(pygame.sprite.Sprite):
         can_move_to_wanted_pos = self.can_move and \
             wanted_pos in " "+"p"+str(self.opponent_num)+"flag"
         if wanted_pos in self.goal and self.has_flag:
-            self._add_point()
+            self.add_point()
         elif abs(self.pos[1] - self.real_pos[1]) == 0 and can_move_to_wanted_pos:
             self.pos[1] += 1
             self.pos[0] = self.real_pos[0]
@@ -119,7 +119,7 @@ class Player(pygame.sprite.Sprite):
         can_move_to_wanted_pos = self.can_move and \
             wanted_pos in " "+"p"+str(self.opponent_num)+"flag"
         if wanted_pos in self.goal and self.has_flag:
-            self._add_point()
+            self.add_point()
         elif abs(self.pos[0] - self.real_pos[0]) == 0 and can_move_to_wanted_pos:
             self.pos[0] -= 1
             self.pos[1] = self.real_pos[1]
@@ -133,22 +133,27 @@ class Player(pygame.sprite.Sprite):
         can_move_to_wanted_pos = self.can_move and \
             wanted_pos in " "+"p"+str(self.opponent_num)+"flag"
         if wanted_pos in self.goal and self.has_flag:
-            self._add_point()
+            self.add_point()
         elif abs(self.pos[0] - self.real_pos[0]) == 0 and can_move_to_wanted_pos:
             self.pos[0] += 1
             self.pos[1] = self.real_pos[1]
         return wanted_pos
 
-    def _add_point(self):
+    def add_point(self):
         """Handles the addition of points to the player.
         If the player takes the flag to the goal, they should not
         be able to move anymore on their turn.
         """
 
-        self.points += 1
+        self.points += 2
         self.has_flag = False
         self.reset_flag = True
         self.can_move = False
+
+    def add_point_from_a_kill(self):
+        """Handles the addition of points to the player when killing the enemy.
+        """
+        self.points += 1
 
     def die(self):
         """Respawns the player to their respawn point.

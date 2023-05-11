@@ -80,9 +80,19 @@ class TestPlayer(unittest.TestCase):
         self.assertEqual(self.player.real_pos, [1, 1])
         self.assertEqual(self.player.has_flag, False)
         self.assertEqual(self.player.reset_flag, True)
-        self.assertEqual(self.player.points, 1)
+        self.assertEqual(self.player.points, 2)
 
     def test_player_does_not_move_with_wrong_input(self):
         self.player.move(self.game_map, "rigth")
         self.assertEqual(self.player.pos, [1, 1])
         self.assertEqual(self.player.real_pos, [1, 1])
+
+    def test_player_gets_a_point_from_hitting_the_enemy(self):
+        self.assertEqual(self.player.points, 0)
+        self.player.add_point_from_a_kill()
+        self.assertEqual(self.player.points, 1)
+
+    def test_add_point_works(self):
+        self.assertEqual(self.player.points, 0)
+        self.player.add_point()
+        self.assertEqual(self.player.points, 2)
