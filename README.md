@@ -1,6 +1,6 @@
 # Capture The Flag
 
-Pelin idea on liikkua vastustajan takana olevalle lipulle, siepata se, ja liikkua takaisin omalle maalille ilman, että vastustaja osuu sinuun ammuksellaan. Pelissä liikutaan nuolinäppäimillä, ja vuoroa vaihdetaan välilyönnistä. Pelaaja numero 2:den vuoron jälkeen on "vuoro 3" jolloin ammukset liikkuvat (ja pelaajat kun olen saanut sen toimimaan).
+Pelin idea on liikkua vastustajan takana olevalle lipulle, siepata se, ja liikkua takaisin omalle maalille ilman, että vastustaja osuu sinuun ammuksellaan. Pelissä liikutaan nuolinäppäimillä, ja vuoroa vaihdetaan välilyönnistä. Toisen pelaajan vuoron jälkeen on "vuoro 3" jolloin ammukset liikkuvat ja pelaajien oikea sijainti näkyy molemmille.
 Sen voi teknillisesti ohittaa painamalla välilyöntiä heti, mutta silloin ammukset eivät osu pelaajiin. Ammuksia ammutaan klikkaamalla hiirellä siihen kohtaan ruutua, johon oletat
 vastustajasi liikkuvan. Pelaajilla on vain yksi ammus, joten uuden kohdan klikkaaminen ei luo uutta ammusta, vaan vaihtaa oman ammuksen suuntaa.
 
@@ -19,6 +19,8 @@ vastustajasi liikkuvan. Pelaajilla on vain yksi ammus, joten uuden kohdan klikka
 - [Testausdokumentti](https://github.com/Robomarti/harjoitustyo/blob/master/dokumentaatio/testaus.md)
 
 ## Pelin asennus
+
+Lataa [viimeisin julkaisu](https://github.com/Robomarti/harjoitustyo/releases/latest) tai cloonaa repositio itsellesi.
 
 - Asenna riippuvuudet komennolla 
 ```bash
