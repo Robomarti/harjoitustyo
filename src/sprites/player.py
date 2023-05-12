@@ -8,6 +8,7 @@ class Player(pygame.sprite.Sprite):
         p1orp2: Tells which player this instance represents.
         image: A reference to the image file for the player.
         opponent_num: Tells which player this instance does not represent.
+        name: The name of the player. This is displayed to the screen.
         rect: A reference to the pygame object responsible for storing rectangular coordinates.
         pos: The current location in an array form.
         real_pos: Saved position of where the player was before making their move.

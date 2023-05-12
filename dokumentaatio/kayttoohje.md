@@ -29,4 +29,4 @@ Pelaajat ei normaalisti voi liikkua oman lippunsa päältä, ettei omaa lippua v
 
 Pelaajat voivat olla sisäkkäin, jos he molemmat liikkuvat samaan ruutuun. Tällöin vain toisen pelaajan grafiikka näkyy pelaajille. Tämän ei pitäisi muuttaa peliä mitenkään.
 
-Pelin ulkonäköä ja pituutta voi muokkaa "services" -hakemiston "settings.py" -tiedoston kautta. Huomaathan että virheellisten muokkausten suorittaminen voi aiheuttaa pelin kaatumisen, eikä tiedoston oikeellisuudelle ole testiä tällä hetkellä.
+Pelaajien nimet ja pelin ulkonäköä ja pituutta voi muokata "services" -hakemiston "settings.py" -tiedoston kautta. Huomaathan että virheellisten muokkausten suorittaminen voi aiheuttaa pelin kaatumisen, eikä tiedoston oikeellisuudelle ole testiä tällä hetkellä.

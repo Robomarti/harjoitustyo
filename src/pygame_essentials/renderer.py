@@ -1,5 +1,6 @@
 import pygame
 import ui.uiLayer
+import services.settings
 
 
 class Renderer:
@@ -26,6 +27,8 @@ class Renderer:
         self._level = level
         self._p1_projectile = p1_projectile
         self._p2_projectile = p2_projectile
+        self._p1_name = services.settings.PLAYER1_NAME
+        self._p2_name = services.settings.PLAYER2_NAME
 
     def render_game(self, turns, player_one, player_two):
         """Draws the projectiles, sprites under the all_sprites group, and the text on the screen.
@@ -43,9 +46,9 @@ class Renderer:
         pygame.draw.circle(self._display, self._p2_projectile.color,
                            self._p2_projectile.location, self._p2_projectile.radius)
         ui.uiLayer.showText("Turns left: " + str(turns), 20, 450)
-        ui.uiLayer.showText("Player 1 points: " +
+        ui.uiLayer.showText(str(self._p1_name) + "'s points: " +
                             str(player_one.points), 20, 100)
-        ui.uiLayer.showText("Player 2 points: " +
+        ui.uiLayer.showText(str(self._p2_name) + "'s points: " +
                             str(player_two.points), 20, 750)
         pygame.display.update()
 

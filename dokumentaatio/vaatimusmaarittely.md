@@ -36,11 +36,12 @@ Sovelluksen tarkoitus on olla pieni kaksinpelattava peli, jossa pelaajat yrittä
 
 - Koko pelin pituutta voi vaihtaa settings.py tiedoston asetuksia.
 - Pelin ulkonäköä voi muuttaa vaihtamalla settings.py tiedoston asetuksia.
+- Pelaajat voivat valita itselleen nimet vaihtamalla settings.py tiedoston asetuksia.
 
 
 ## Jatkokehitysideoita
 
 Perusversion jälkeen peliin lisätään seuraavat toiminnallisuudet ajan salliessa:
-- Pelaajat voivat valita itselleen nimet.
+- Pelaajien pisteitä voi verrata ennätyspistemäärään, ja ennätyspisteet voidaan tallettaa tietokantaan.
 - Pelaajia voi olla useampi kuin 2.
 - Pelin voi tallentaa jokaisen vuoron jälkeen, ja siihen voi palata myöhemmin.
