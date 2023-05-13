@@ -21,7 +21,7 @@ Sen voi teknillisesti ohittaa painamalla välilyöntiä heti, mutta silloin ammu
 Ammuksia ammutaan klikkaamalla hiirellä siihen kohtaan ruutua, johon oletat
 vastustajasi liikkuvan. Pelaajilla on vain yksi ammus, joten uuden kohdan klikkaaminen ei luo uutta ammusta, vaan vaihtaa oman ammuksen suuntaa.
 
-Pelaaja saa yhden pisteen osuessaan vastustajansa ammuksellaan, sekä kaksi pistettä viedessään vastustajan lipun omaan maaliinsa. Pelaajat voivat käyttää maaleja esteinä heidän ja vastustajan ammusten välillä.
+Pelaaja saa yhden pisteen osuessaan vastustajansa ammuksellaan, sekä viisi pistettä viedessään vastustajan lipun omaan maaliinsa. Pelaajat voivat käyttää maaleja esteinä heidän ja vastustajan ammusten välillä.
 
 Viedessään vastustajan lipun omaan maaliinsa, pelaaja ei liiku näytöllä, mutta hänen liikkumisensa on vuoron osalta käytetty.
 
