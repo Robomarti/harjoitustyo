@@ -146,7 +146,7 @@ class Player(pygame.sprite.Sprite):
         be able to move anymore on their turn.
         """
 
-        self.points += 2
+        self.points += 5
         self.has_flag = False
         self.reset_flag = True
         self.can_move = False

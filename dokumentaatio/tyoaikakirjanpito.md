@@ -23,4 +23,5 @@
 | 10.5.2023 | 6 | Sain pelaajien todellisen sijainnin pysymään toisiltaan salassa kunnes viimeinen osa vuorosta tapahtuu. Lisäsin myös pelin muokattavuutta settings.py tiedoston kautta. Lisäsin testikattavuutta ja dokumentaatiota. |
 | 11.5.2023 | 2 | Lisäsin dokumentaatiota. Lisäsin pisteidensaannin vastustajaan osumisesta, sekä maalien käytön suojana. |
 | 12.5.2023 | 1 | Lisäsin pelaajille nimet. |
-| Yht. | 47 | |
+| 13.5.2023 | 1 | Korjasin bugeja. |
+| Yht. | 48 | |

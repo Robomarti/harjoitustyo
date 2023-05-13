@@ -63,6 +63,7 @@ class GameLoop:
         self._renderer = pygame_essentials.renderer.Renderer(
             display, self.level, self.p1_projectile, self.p2_projectile)
         self.turns = copy.copy(services.settings.TURNS)
+        self.game_over = False
 
     def start(self):
         """The main loop that keeps the application running.
@@ -111,10 +112,10 @@ class GameLoop:
             self.current_turn = 5
             self.current_player = None
             self.apply_player_positions()
+        elif self.current_turn == 5:
+            self.handle_turn_change()
         elif self.current_turn == 10:
             self.current_turn = 11
-        else:
-            self.handle_turn_change()
 
     def handle_turn_change(self):
         self.current_turn = 1
@@ -146,13 +147,15 @@ class GameLoop:
         """Renders images to the screen.
         """
 
-        if self.turns <= 0:
-            self._renderer.render_game_over(self.player1, self.player2)
+        if not self.game_over and self.turns <= 0:
             self.current_turn = 10
+            self.game_over = True
         elif self.current_turn == 1:
             self._renderer.render_player_one_turn()
         elif self.current_turn == 3:
             self._renderer.render_player_two_turn()
+        elif self.current_turn == 10:
+            self._renderer.render_game_over(self.player1, self.player2)
         elif self.current_turn == 11:
             self._renderer.render_play_again()
         else:
