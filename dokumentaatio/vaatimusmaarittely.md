@@ -21,9 +21,9 @@ Sovelluksen tarkoitus on olla pieni kaksinpelattava peli, jossa pelaajat yrittä
   - Pelaaja voi tehdä molemmat toiminnot missä järjestyksessä tahansa.
   - Liikkuessaan pelaaja voi liikkua tietyn etäisyyden haluamaansa suuntaan.
     - Jos pelaaja liikkuu vastakkaisen pelaajan lipun päälle, hän alkaa kantamaan sitä mukanansa.
-    - Jos pelaaja liikkuu vastakkaisen pelaajan lipun kanssa omaan maaliinsa, hän saa yhden pisteen.
+    - Jos pelaaja liikkuu vastakkaisen pelaajan lipun kanssa omaan maaliinsa, hän saa viisi pistettä.
   - Hyökätessään pelaaja voi ampua haluamaansa suuntaan.
-    - Jos pelaaja osuu toiseen pelaajaan, pelaaja johon hän osui palaa takaisin kohtaan, josta hän aloitti pelin.
+    - Jos pelaaja osuu toiseen pelaajaan, hän saa yhden pisteen, ja pelaaja johon hän osui palaa takaisin kohtaan, josta hän aloitti pelin.
       - Jos osuttu pelaaja oli kantamassa toisen pelaajan lippua, lippu jää siihen kohtaan mihin hän "kuoli".
 - Molemmilla pelaajilla on käytettävänään 30 vuoroa ennen kuin peli päättyy.
   
